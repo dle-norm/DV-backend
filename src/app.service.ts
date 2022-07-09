@@ -11,6 +11,10 @@ export class AppService {
   ) {}
 
   async findAll(): Promise<CategoriesEntity[]> {
-    return await this.entityRepository.find();
+    return await this.entityRepository.find({
+      relations: {
+        children: true,
+      },
+    });
   }
 }
