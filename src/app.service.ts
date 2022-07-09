@@ -14,6 +14,7 @@ export class AppService {
     return await this.entityRepository.find({
       relations: {
         children: true,
+        ancestors: true,
       },
     });
   }

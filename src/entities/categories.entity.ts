@@ -20,5 +20,5 @@ export class CategoriesEntity {
 
   @TreeParent()
   @JoinColumn({ name: 'parent_id' })
-  parent?: CategoriesEntity;
+  ancestors?: CategoriesEntity;
 }
